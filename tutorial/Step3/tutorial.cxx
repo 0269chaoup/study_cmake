@@ -24,11 +24,11 @@ int main(int argc, char* argv[])
   const double inputValue = std::stod(argv[1]);
 
   // which square root function should we use?
-#ifdef USE_MYMATH
-  const double outputValue = mysqrt(inputValue);
-#else
+// #ifdef USE_MYMATH
+//   const double outputValue = mysqrt(inputValue);
+// #else
   const double outputValue = sqrt(inputValue);
-#endif
+/
 
   std::cout << "The square root of " << inputValue << " is " << outputValue
             << std::endl;

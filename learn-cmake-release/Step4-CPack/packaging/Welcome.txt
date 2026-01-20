@@ -1,0 +1,12 @@
+Welcome to MyMathApp Installer
+
+This installer will guide you through the installation of MyMathApp.
+
+MyMathApp is a simple mathematical utility that demonstrates CMake's
+packaging capabilities. It provides basic mathematical operations
+including:
+
+  - Square root calculation
+  - Number squaring
+
+Please click Next to continue with the installation.

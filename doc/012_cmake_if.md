@@ -125,3 +125,4 @@ endif()
     if(DEFINED CACHE{SOMEVAR})    # Checks for a CMake cache variable
     if(DEFINED ENV{SOMEVAR})      # Checks for an environment variable
     ```
+

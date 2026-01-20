@@ -10,6 +10,9 @@ project(study_cmake_031
 list(APPEND CMAKE_MESSAGE_CONTEXT       "study_cmake_031")
 list(APPEND CMAKE_MODULE_PATH           "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 
+message(STATUS "CMAKE_MODULE_PATH: ${CMAKE_MODULE_PATH}")
+message(STATUS "CMAKE_CURRENT_SOURCE_DIR: ${CMAKE_CURRENT_SOURCE_DIR}")
+
 set(CMAKE_EXPORT_COMPILE_COMMANDS       ON)
 set(study_cmake_031_TOP_SOURCE_DIR          ${CMAKE_CURRENT_SOURCE_DIR})
 set(study_cmake_031_TOP_BINARY_DIR          ${CMAKE_CURRENT_BINARY_DIR})
@@ -68,7 +71,7 @@ endfunction()
 
 aaaaaa()
 
-get_cmake_property(vars FIND_LIBRARY_USE_LIB64_PATHS)
+get_cmake_property(vars CMAKE_C_KNOWN_FEATURES)
 
 foreach(var ${vars})
     message(STATUS ${var})

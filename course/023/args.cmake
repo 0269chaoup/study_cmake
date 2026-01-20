@@ -16,7 +16,7 @@ macro(macr arg)
     endif()
 endmacro()
 
-func(foobar)
+func(foobar)# 此时 foobar 在内部就认为是已经定义的变量了
 macr(foobar)
 
 message("--------------------")
@@ -78,7 +78,7 @@ func1(3)
 
 message("--------------------")
 
-
+#######course/024
 function(func2)
     # Define the supported set of keywords
     set(prefix ARG)
@@ -138,18 +138,18 @@ function(demoArgs)
     set(singleValues SPECIAL)
     set(multiValues EXTRAS)
     
-    # cmake_parse_arguments(
-    #     PARSE_ARGV 0
-    #     ARG
-    #     "${noValues}" "${singleValues}" "${multiValues}"
-    # )
-
-    include(CMakeParseArguments)
     cmake_parse_arguments(
+        PARSE_ARGV 0
         ARG
         "${noValues}" "${singleValues}" "${multiValues}"
-        ${ARGN}
     )
+
+    # include(CMakeParseArguments)
+    # cmake_parse_arguments(
+    #     ARG
+    #     "${noValues}" "${singleValues}" "${multiValues}"
+    #     ${ARGN}
+    # )
     
     message("Left-over args: ${ARG_UNPARSED_ARGUMENTS}")
     

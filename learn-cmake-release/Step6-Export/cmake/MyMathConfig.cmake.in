@@ -1,0 +1,27 @@
+@PACKAGE_INIT@
+
+# =============================================================================
+# MyMathConfig.cmake.in
+# =============================================================================
+# 这是 configure_package_config_file() 的输入模板
+# @PACKAGE_INIT@ 会被替换为初始化代码
+#
+# 生成后，其他项目可以通过以下方式使用：
+#   find_package(MyMath 1.0 REQUIRED)
+#   target_link_libraries(myapp PRIVATE MyMath::mymath)
+# =============================================================================
+
+# 引入导出的目标
+include("${CMAKE_CURRENT_LIST_DIR}/MyMathTargets.cmake")
+
+# 检查所有必需的组件是否存在
+check_required_components(MyMath)
+
+# 可选：设置一些变量供用户使用
+# 这些变量可以在 find_package 后使用
+set(MyMath_FOUND TRUE)
+
+# 打印调试信息（可选）
+if(NOT MyMath_FIND_QUIETLY)
+    message(STATUS "Found MyMath: ${CMAKE_CURRENT_LIST_DIR}")
+endif()

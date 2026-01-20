@@ -1,0 +1,12 @@
+MyMathApp - A Simple Math Application
+
+MyMathApp is a demonstration project that shows how to use CMake for
+building, installing, and packaging C++ applications.
+
+Features:
+- Calculate square roots of numbers
+- Calculate squares of numbers
+- Cross-platform support (Windows, Linux, macOS)
+
+This application is designed as a learning tool for CMake's install
+and packaging features.

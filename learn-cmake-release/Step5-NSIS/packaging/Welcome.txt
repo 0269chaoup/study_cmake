@@ -1,0 +1,8 @@
+Welcome to MyMathApp Installer
+
+This installer will guide you through the installation of MyMathApp.
+
+MyMathApp is a simple mathematical utility that demonstrates CMake's
+packaging capabilities.
+
+Please click Next to continue with the installation.
